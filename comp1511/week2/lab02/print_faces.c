@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 
+
 int main(void) {
 
     // 1 for true 0 for false 2 for fixing something
