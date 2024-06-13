@@ -12,8 +12,8 @@ int main(void){
     printf("Enter size: ");
     scanf(" %d", &grid);
 
-    while (row < grid){
-        while (column < grid){
+    while (row < grid) {
+        while (column < grid) {
             printf("(%d, %d) ", row, column++);
         }
         printf("\n");

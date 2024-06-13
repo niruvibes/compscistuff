@@ -6,8 +6,8 @@
 int main(void){
 
     int layercount;
-    int i = 0;
-    int z = 0;
+    int width = 0;
+    int height = 0;
     char layers[10];
 
     printf("How many layers: ");
@@ -16,14 +16,14 @@ int main(void){
     printf("Please enter layers: ");
     scanf("%s", layers);
 
-    while (z < layercount){
-        while (i < layercount){
-            printf("%c", layers[z]);
-            i++;
+    while (height < layercount) {
+        while (width < layercount) {
+            printf("%c", layers[height]);
+            width++;
         }
         printf("\n");
-        i = 0;
-        z++;
+        width = 0;
+        height++;
     }   
 
     // printf("%c\n", layers[0]);
