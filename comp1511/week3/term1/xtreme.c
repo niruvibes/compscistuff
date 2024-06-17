@@ -1,4 +1,4 @@
-// i think i reached the point where i cant rely on my previous knowledge to continue this course
+// column think column reached the point where column cant rely on my previous knowledge to continue this course
 // which is mighty disapointing considering its week 3
 // this was a struggle
 // z5592479 Neil
@@ -7,28 +7,35 @@
 
 int main(void) {
 
-    int size;
+    int size, half;
     // int width, height;
-    int width_counter, height_counter = 1;
+    int column = 0, row;
 
     printf("Enter size: ");
     scanf(" %d", &size);
+    half = size/2;
 
-    while (height_counter <= size) {
-        width_counter = 1;
-        while (width_counter <= size) {
-            if (height_counter % 4 == width_counter % 4) {
-                putchar('*');
-            // } else if (height_counter % 4 == (width_counter - 2) % 4) {
-            //     putchar('*');
+    while (column < size) {
+        row = 0;
+        while (row < size) {
+            if ((column > half && row < half) ||
+                (column < half && row > half)) {
+                if ((column + row + 1 - size) % 4 == 0) {
+                    putchar('*');
+                } else {
+                    putchar('-');
+                }
             } else {
-                putchar('-');
+                if ((column - row) % 4 == 0) {
+                    putchar('*');
+                } else {
+                    putchar('-');
+                }
             }
-            width_counter++;
+            
+            row++;
         }
         putchar('\n');
-        height_counter++;
-
+        column++; 
     }
-
 }
